@@ -26,17 +26,53 @@
 <body>
 <div class="container">
     <div class="page-header">
-        <h1>Lab8-part2</h1>
+        <h1>Interview Entry</h1>
     </div>
     <div class="row">
-
-        <?php
-            /**
-             *
-             * Author: Brandon Young
-             */
-
-        ?>
+        <div class="col-xs-8">
+            <form action="EnterInterviewDataYoung.php" method="post">
+                <div class="form-group col-xs-6">
+                    <label for="interviewer">Interviewer's Name:</label>
+                    <input id="interviewer" class="form-control" type="text" name="interviewer" placeholder="Interviewers Name" required/>
+                </div>
+                <div class="form-group col-xs-6">
+                    <label for="position">Position:</label>
+                    <input id="position" class="form-control" type="text" name="position" placeholder="Position Applying For" required/>
+                </div>
+                <div class="form-group col-xs-6">
+                    <label for="date">Date of Interview:</label>
+                    <!-- By using the date type it forces the correct date format that matches MySQL date type even though the browser may show it differently -->
+                    <input id="date" class="form-control" type="date" name="date"  required/>
+                </div>
+                <div class="form-group col-xs-6">
+                    <label for="candidate">Candidate's Name:</label>
+                    <input id="candidate" type="text" class="form-control" name="candidate" placeholder="Candidate's Name" required/>
+                </div>
+                <div class="form-group col-xs-12">
+                    <label for="communication">Communication Abilities:</label>
+                    <textarea name="communication" id="communication" cols="30" rows="6" class="form-control" required></textarea>
+                </div>
+                <div class="form-group col-xs-12">
+                    <label for="appearance">Professional Appearance:</label>
+                    <textarea name="appearance" id="appearance" cols="30" rows="6" class="form-control" required></textarea>
+                </div>
+                <div class="form-group col-xs-12">
+                    <label for="computer_skills">Computer Skills:</label>
+                    <textarea name="computer_skills" id="computer_skills" cols="30" rows="6" class="form-control" required></textarea>
+                </div>
+                <div class="form-group col-xs-12">
+                    <label for="bussiness_knowledge">Bussiness Knowledge:</label>
+                    <textarea name="bussiness_knowledge" id="bussiness_knowledge" cols="30" rows="6" class="form-control" required></textarea>
+                </div>
+                <div class="form-group col-xs-12">
+                    <label for="comments">Interviewer's Comments:</label>
+                    <textarea name="comments" id="comments" cols="30" rows="6" class="form-control" required></textarea>
+                </div>
+                <input class ="btn" type="submit" value="Submit">
+                <input class ="btn" type="reset" value="Clear Form">
+            </form>
+            <p><a href="ViewInterviewsYoung.php">View Interviews</a></p>
+        </div>
     </div>
 </div>
 </body>
